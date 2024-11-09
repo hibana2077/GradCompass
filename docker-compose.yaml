@@ -1,6 +1,6 @@
 services:
   web:
-    build: .
+    build: ./web
     environment:
       NEXT_PUBLIC_UNIVERSITY_DEPARTMENT: "國立臺東大學資訊工程學系"
       NEXT_PUBLIC_UNIVERSITY_DEPARTMENT_ABBREVIATION: "NTTU CSIE"
@@ -12,10 +12,28 @@ services:
     ports:
       - "5000:5000"
     depends_on:
+      - api
+    networks:
+      - internal
+
+  api:
+    build: ./api
+    ports:
+      - "10000:10000"
+    depends_on:
       - db
+    networks:
+      - internal
+
   db:
     image: postgres
     environment:
       POSTGRES_DB: mydb
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge

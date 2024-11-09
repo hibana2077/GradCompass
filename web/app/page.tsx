@@ -39,7 +39,8 @@ const HomePage = () => {
                   "學術成績與表現",
                   "申請準備過程",
                   "面試技巧與建議"
-                ]
+                ],
+                color: "bg-blue-50 "
               },
               {
                 icon: <School className="h-6 w-6" />,
@@ -49,7 +50,8 @@ const HomePage = () => {
                   "研究領域分類",
                   "指導教授專長",
                   "實驗室研究方向"
-                ]
+                ],
+                color: "bg-yellow-50"
               },
               {
                 icon: <BarChart2 className="h-6 w-6" />,
@@ -59,13 +61,14 @@ const HomePage = () => {
                   "錄取率統計",
                   "分數分布分析",
                   "歷年趨勢追蹤"
-                ]
+                ],
+                color: "bg-green-50"
               }
             ].map((section, i) => (
               <Card key={i} className="border-2">
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-3 mb-4">
-                    <div className="p-2 bg-blue-50 rounded-lg">
+                    <div className={`p-2 rounded-full ${section.color}`}>
                       {section.icon}
                     </div>
                     <h3 className="text-lg font-semibold">{section.title}</h3>
@@ -86,7 +89,7 @@ const HomePage = () => {
       </section>
 
       {/* Quick Stats */}
-      <section className="bg-gray-50 py-16">
+      <section className="bg-blue-50 py-16">
         <div className="max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
@@ -112,7 +115,7 @@ const HomePage = () => {
             幫助學弟妹更好地規劃他們的研究所申請之路
           </p>
           <div className="flex gap-4 justify-center">
-            <Button className="bg-blue-600 hover:bg-blue-700">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
               填寫申請經驗
             </Button>
             <Button variant="outline">

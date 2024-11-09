@@ -1,26 +1,39 @@
 # GradCompass
 
-🎓 Navigate your grad school journey through alumni experiences. Interactive visualization of admission paths, peer insights, and application strategies for graduate school applicants.
+🎓 專為台灣的大學推甄管道量身打造的系所申請導航平台。透過學長姐的申請經驗、互動式視覺化介面，協助學生規劃研究所推甄之路。
 
-## Overview
+## 系統概觀
 
-GradCompass is a web platform designed to help students navigate their graduate school application journey by leveraging the experiences of alumni. Through interactive visualizations and comprehensive experience sharing, we aim to make the graduate school application process more transparent and accessible.
+GradCompass 是一個專門為各大學系所設計的自架式平台，旨在協助學生掌握推甄資訊並做出明智的申請決策。透過收集和分析歷屆學長姐的申請經驗，我們期望能讓推甄過程更加透明化，幫助學弟妹更有效地規劃申請策略。
 
-## Features
+## 核心功能
 
-- 📊 **Interactive Path Visualization**: Track admission paths using Parallel Categories diagrams
-- 👥 **Alumni Experience Database**: Searchable repository of detailed application experiences
-- 📈 **Statistical Analysis**: Historical admission data and success rates
-- 🔍 **Smart Search**: Find relevant experiences based on schools, programs, or keywords
-- 🏷️ **Tagging System**: Categorize and filter experiences by research areas and interests
+- 📊 **互動式路徑視覺化**：透過平行分類圖表追蹤歷屆錄取路徑
+- 👥 **申請經驗庫**：可搜尋的詳細推甄經驗資料庫
+- 📈 **統計分析**：歷年錄取數據與趨勢分析
+- 🔍 **智慧搜尋**：根據學校、系所或關鍵字尋找相關經驗
+- 🏷️ **標籤系統**：依研究領域和興趣分類並篩選經驗
 
-## Tech Stack
+## 系統特色
+
+- 🏫 **系所自主部署**：各系所可獨立架設與維護
+- 📝 **經驗收集系統**：便捷的表單介面收集校友經驗
+- 🔒 **資料隱私保護**：系所可自行管理資料存取權限
+- 📊 **客製化分析**：符合各系所特色的數據分析
+
+## 技術架構
 
 - **Frontend**: React.js + Tailwind CSS
-- **Backend**: Node.js + Express
-- **Database**: MongoDB
+- **Backend**: FastAPI
+- **Database**: MongoDB + PostgreSQL
 - **Visualization**: D3.js
-- **Authentication**: JWT + OAuth2.0
+
+## 系統需求
+
+- 支援系所獨立部署
+- 彈性的資料收集與管理
+- 安全的資料存取控制
+- 支援多重資料庫整合
 
 ## Getting Started
 

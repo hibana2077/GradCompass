@@ -97,7 +97,7 @@ const Footer = () => {
             </div>
             <div className="flex items-center space-x-6">
               <a
-                href="https://github.com/ntu-csie"
+                href="https://github.com/hibana2077/GradCompass"
                 className="text-gray-600 hover:text-blue-600"
                 target="_blank"
                 rel="noopener noreferrer"
