@@ -1,0 +1,21 @@
+services:
+  web:
+    build: .
+    environment:
+      NEXT_PUBLIC_UNIVERSITY_DEPARTMENT: "國立臺東大學資訊工程學系"
+      NEXT_PUBLIC_UNIVERSITY_DEPARTMENT_ABBREVIATION: "NTTU CSIE"
+      NEXT_PUBLIC_UNIVERSITY_DEPARTMENT_ABBREVIATION_CN: "東大資工系"
+      NEXT_PUBLIC_UNIVERSITY_ADDRESS: "臺東縣臺東市大學路二段369號"
+      NEXT_PUBLIC_UNIVERSITY_PHONE: "089-853-000"
+      NEXT_PUBLIC_UNIVERSITY_EMAIL: "csie@nttu.edu.tw"
+      NEXT_PUBLIC_UNIVERSITY_WEBSITE: "https://www.nttu.edu.tw/"
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
