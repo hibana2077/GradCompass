@@ -85,8 +85,12 @@ const Navbar = () => {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex md:items-center md:space-x-4">
-            <Button variant="outline">登入</Button>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">註冊</Button>
+            <Button variant="outline">
+              <a href="/login">登入</a>
+            </Button>
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              <a href="/register">註冊</a>
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -120,10 +124,10 @@ const Navbar = () => {
                   ))}
                   <div className="pt-4 space-y-3 border-t border-gray-200">
                     <Button className="w-full" variant="outline">
-                      登入
+                      <a href="/login">登入</a>
                     </Button>
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
-                      註冊
+                      <a href="/register">註冊</a>
                     </Button>
                   </div>
                 </div>
