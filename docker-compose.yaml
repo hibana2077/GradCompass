@@ -18,6 +18,8 @@ services:
 
   dap:
     build: ./data_analysis_platform
+    environment:
+      API_HOST: "api"
     ports:
       - "8080:8080"
     depends_on:
