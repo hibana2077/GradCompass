@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Search, Filter, BookOpen, Star, ArrowUpDown, School, Tag, Eye, Calendar } from 'lucide-react';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/components/ui/card';
@@ -64,7 +66,7 @@ const ExperienceBrowsePage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white mb-6">
       {/* 頁面頭部背景 */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 py-16">
@@ -77,7 +79,7 @@ const ExperienceBrowsePage = () => {
 
       <div className="container mx-auto px-4 -mt-8">
         {/* 搜尋和篩選卡片 */}
-        <Card className="mb-8 shadow-lg">
+        <Card className="mb-8 shadow-lg bg-white">
           <CardContent className="p-6">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="relative flex-1">
