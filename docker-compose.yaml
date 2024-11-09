@@ -16,6 +16,15 @@ services:
     networks:
       - internal
 
+  dap:
+    build: ./data_analysis_platform
+    ports:
+      - "8080:8080"
+    depends_on:
+      - api
+    networks:
+      - internal
+
   api:
     build: ./api
     ports:
@@ -31,6 +40,17 @@ services:
       POSTGRES_DB: mydb
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
+    volumes:
+      - ./sql:/var/lib/postgresql/data
+    networks:
+      - internal
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo:/data/db
     networks:
       - internal
 

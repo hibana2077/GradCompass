@@ -1,0 +1,16 @@
+person, CPE, Compition, Journal, Conference, Application, First_stage, Second_stage, Final_stage
+A, 7, 1, 2, 3, NTU, Pass, Pass, 正取
+B, 5, 2, 1, 2, NCTU, Pass, Pass, 正取
+C, 6, 1, 2, 3, NCU, Pass, Pass, 正取
+D, 4, 3, 1, 1, NTHU, Pass, Fail, 備取
+A, 7, 1, 2, 3, NCTU, Pass, Pass, 正取
+B, 5, 2, 1, 2, NTU, Pass, Pass, 正取
+C, 6, 1, 2, 3, NCTU, Fail, - , -
+D, 4, 3, 1, 1, NCU, Pass, Fail, 備取
+A, 7, 1, 2, 3, NTU, Pass, Fail, 備取
+B, 5, 2, 1, 2, NTHU, Pass, Pass, 正取
+C, 6, 1, 2, 3, NCU, Pass, Fail, 備取
+D, 4, 3, 1, 1, NTU, Pass, Pass, 正取
+A, 7, 1, 2, 3, NTHU, Fail, - , -
+C, 6, 1, 2, 3, NCU, Fail, - , -
+D, 4, 3, 1, 1, NTU, Pass, Pass, 正取
