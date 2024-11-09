@@ -26,7 +26,6 @@ const Navbar = () => {
       items: [
         { name: "瀏覽經驗分享", href: "/experiences" },
         { name: "填寫申請經驗", href: "/experiences/new" },
-        { name: "熱門經驗", href: "/experiences/trending" },
       ]
     },
     {
