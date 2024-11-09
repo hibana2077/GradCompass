@@ -24,28 +24,28 @@ const Navbar = () => {
     {
       title: "申請經驗",
       items: [
-        { name: "瀏覽經驗分享", href: "/experiences" },
-        { name: "填寫申請經驗", href: "/experiences/new" },
+        { name: "瀏覽經驗分享", href: "/experiences", under_development: false },
+        { name: "填寫申請經驗", href: "/experiences/new", under_development: false },
       ]
     },
     {
       title: "學校資料",
       items: [
-        { name: "瀏覽學校", href: "/schools" },
-        { name: "研究領域搜尋", href: "/schools/research" },
+        { name: "瀏覽學校", href: "/schools", under_development: true },
+        { name: "研究領域搜尋", href: "/schools/research", under_development: true },
       ]
     },
     {
       title: "數據分析",
       items: [
-        { name: "申請路徑圖", href: "/analytics/paths" },
-        { name: "錄取統計", href: "/analytics/statistics" },
+        { name: "申請路徑圖", href: "/analytics/paths", under_development: true },
+        { name: "錄取統計", href: "/analytics/statistics", under_development: true },
       ]
     },
     {
       title: "其他",
       items: [
-        { name: "關於我們", href: "/about" },
+        { name: "關於我們", href: "/about", under_development: false },
       ]
     }
   ];
