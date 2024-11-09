@@ -29,6 +29,13 @@ services:
     build: ./api
     ports:
       - "10000:10000"
+    environment:
+      POSTGRES_USER: "myuser"
+      POSTGRES_PASSWORD: "mypassword"
+      POSTGRES_DB: "gradcompass"
+      POSTGRES_HOST: "db"
+      POSTGRES_PORT: "5432"
+      MONGO_URL: "mongodb://mongo:27017/"
     depends_on:
       - db
     networks:
@@ -37,9 +44,9 @@ services:
   db:
     image: postgres
     environment:
-      POSTGRES_DB: mydb
-      POSTGRES_USER: myuser
-      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: "gradcompass"
+      POSTGRES_USER: "myuser"
+      POSTGRES_PASSWORD: "mypassword"
     volumes:
       - ./sql:/var/lib/postgresql/data
     networks:

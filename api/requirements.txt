@@ -3,3 +3,4 @@ pymongo
 pandas
 fastapi
 uvicorn
+psycopg2-binary
