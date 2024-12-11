@@ -14,6 +14,36 @@ if st.query_params['grad_tracker'] == 'true':
 
         # Programming experience
         CPE_score = st.number_input('CPE題數', min_value=0, max_value=7, value=0, step=1)
+        ICPC_experience = st.number_input('ICPC經驗', min_value=0, value=0, step=1)
+        NCPC_experience = st.number_input('NCPC經驗', min_value=0, value=0, step=1)
+
+        ICPC_detail = []
+        if len(ICPC_detail) < ICPC_experience:
+            with st.form(key='ICPCForm'):
+                st.write('輸入你的ICPC經驗資訊')
+                rank = st.selectbox('名次', ['金牌', '銀牌', '銅牌', '參賽'])
+
+                submitted_ICPC_form = st.form_submit_button('Submit')
+
+                if submitted_ICPC_form:
+                    ICPC_detail.append({
+                        'rank': rank
+                    })
+
+        NCPC_detail = []
+        if len(NCPC_detail) < NCPC_experience:
+            with st.form(key='NCPCForm'):
+                st.write('輸入你的NCPC經驗資訊')
+                rank = st.selectbox('名次', ['金牌', '銀牌', '銅牌', '參賽'])
+
+                submitted_NCPC_form = st.form_submit_button('Submit')
+
+                if submitted_NCPC_form:
+                    NCPC_detail.append({
+                        'rank': rank
+                    })
+
+        # Teaching experience
         TA_experience = st.number_input('助教經驗', min_value=0, value=0, step=1)
         github_total_stars = st.number_input('Github總星數', min_value=0, value=0, step=1)
 
@@ -60,6 +90,20 @@ if st.query_params['grad_tracker'] == 'true':
                         'impact_factor': impact_factor,
                         'collaboration': collaboration
                     })
+
+        # Working experience
+        internship_experience = st.number_input('實習經驗', min_value=0, value=0, step=1)
+
+        # Competition experience
+        competition_experience = st.number_input('競賽經驗', min_value=0, value=0, step=1)
+        competition_detail = []
+        if len(competition_detail) < competition_experience:
+            with st.form(key='CompetitionForm'):
+                st.write('輸入你的競賽經驗資訊')
+                competition_name = st.text_input('競賽名稱')
+                award = st.selectbox('獎項', ['冠軍', '亞軍', '季軍', '佳作', '未獲獎'])
+                competition_level = st.selectbox('競賽等級', ['國際', '全國', '校內', '其他'])
+                
 
         submitted_form = st.form_submit_button('Submit')
         student_name = st.query_params['student_name']
