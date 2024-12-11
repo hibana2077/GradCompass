@@ -23,5 +23,5 @@ if not st.session_state.login:
             else:
                 st.write('Invalid username or password')
 else:
-    st.write('Admin page')
+    st.title('Admin page')
     st.write('This page is under construction.')

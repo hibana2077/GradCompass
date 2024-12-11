@@ -21,8 +21,10 @@ import pymongo
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017/")
 mongo_client = pymongo.MongoClient("mongodb://mongo:27017/")
 
-# FassAPI
+# FastAPI
 app = FastAPI()
+
+HOST = os.getenv("HOST", "localhost")
 
 # CORS
 origins = [
@@ -84,3 +86,6 @@ def create_data(data: dict):
     #         }
     collection.insert_one(data)
     return JSONResponse(content={"message": "Data created successfully", 'status': 'success'})
+
+if __name__ == "__main__":
+    uvicorn.run(app, host=HOST, port=10000)

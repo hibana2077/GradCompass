@@ -25,6 +25,7 @@ services:
       - "10000:10000"
     environment:
       MONGO_URL: "mongodb://mongo:27017/"
+      HOST: "0.0.0.0"
     depends_on:
       - mongo
     networks:
