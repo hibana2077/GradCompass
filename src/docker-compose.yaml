@@ -12,6 +12,7 @@ services:
       BACKEND_URL: "http://api:10000"
       ADMIN: "admin"
       ADMIN_PASSWORD: "admin"
+      HOST: "localhost" # need to replace with your host
     ports:
       - "8080:8080"
     depends_on:
