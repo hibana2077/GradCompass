@@ -7,7 +7,8 @@ BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:10000")
 
 st.set_page_config(layout="centered")
 
-if st.query_params['grad_tracker'] == 'true':
+# if st.query_params['grad_tracker'] == 'true':
+if "grad_tracker" in st.query_params:
     with st.form(key='AcademicForm'):
         st.write('輸入你的學術背景')
         # Get the user input
