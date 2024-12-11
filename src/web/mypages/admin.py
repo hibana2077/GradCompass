@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import os
+import requests
 
 HOST = os.getenv("HOST", "localhost")
 st.set_page_config(layout="centered")
@@ -38,3 +39,13 @@ else:
 
         if submitted:
             st.write(f'問卷連結: https://{HOST}/form?student_id={student_id}&student_name={student_name}')
+
+    # download the data
+    with st.form(key='download_form'):
+        st.write('下載學生資料')
+        submitted = st.form_submit_button('Download')
+
+        if submitted:
+            response = requests.get(f"http://{HOST}:10000/data")
+            df = pd.DataFrame(response.json())
+            st.dataframe(df)
