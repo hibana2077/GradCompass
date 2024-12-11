@@ -2,24 +2,13 @@ services:
   web:
     build: ./web
     environment:
-      NEXT_PUBLIC_UNIVERSITY_DEPARTMENT: "國立臺東大學資訊工程學系"
-      NEXT_PUBLIC_UNIVERSITY_DEPARTMENT_ABBREVIATION: "NTTU CSIE"
-      NEXT_PUBLIC_UNIVERSITY_DEPARTMENT_ABBREVIATION_CN: "東大資工系"
-      NEXT_PUBLIC_UNIVERSITY_ADDRESS: "臺東縣臺東市大學路二段369號"
-      NEXT_PUBLIC_UNIVERSITY_PHONE: "089-853-000"
-      NEXT_PUBLIC_UNIVERSITY_EMAIL: "csie@nttu.edu.tw"
-      NEXT_PUBLIC_UNIVERSITY_WEBSITE: "https://www.nttu.edu.tw/"
-    ports:
-      - "5000:5000"
-    depends_on:
-      - api
-    networks:
-      - internal
-
-  dap:
-    build: ./data_analysis_platform
-    environment:
-      API_HOST: "api"
+      UNIVERSITY_DEPARTMENT: "國立臺東大學資訊工程學系"
+      UNIVERSITY_DEPARTMENT_ABBREVIATION: "NTTU CSIE"
+      UNIVERSITY_DEPARTMENT_ABBREVIATION_CN: "東大資工系"
+      UNIVERSITY_ADDRESS: "臺東縣臺東市大學路二段369號"
+      UNIVERSITY_PHONE: "089-853-000"
+      UNIVERSITY_EMAIL: "csie@nttu.edu.tw"
+      UNIVERSITY_WEBSITE: "https://www.nttu.edu.tw/"
     ports:
       - "8080:8080"
     depends_on:
@@ -32,27 +21,9 @@ services:
     ports:
       - "10000:10000"
     environment:
-      POSTGRES_USER: "myuser"
-      POSTGRES_PASSWORD: "mypassword"
-      POSTGRES_DB: "gradcompass"
-      POSTGRES_HOST: "db"
-      POSTGRES_PORT: "5432"
       MONGO_URL: "mongodb://mongo:27017/"
     depends_on:
       - db
-    networks:
-      - internal
-
-  db:
-    image: postgres
-    environment:
-      POSTGRES_DB: "gradcompass"
-      POSTGRES_USER: "myuser"
-      POSTGRES_PASSWORD: "mypassword"
-    ports:
-      - "5432:5432"
-    volumes:
-      - ./sql:/var/lib/postgresql/data
     networks:
       - internal
 
