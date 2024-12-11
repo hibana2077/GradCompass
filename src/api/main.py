@@ -55,7 +55,7 @@ def read_data():
     data = list(collection.find())
     return data
 
-@app.post("/data")
+@app.post("/grad_tracker")
 def create_data(data: dict):
     # Save data to MongoDB
     db = mongo_client["data_analysis_platform"]
@@ -63,4 +63,4 @@ def create_data(data: dict):
     # data format:
     # {"Student ID": x, "CPE": x, "Competition": x, "Journal": x, "Conference": x, "Internship": x, "GPA": x, "Application_Universities": x, "Application_Departments": x, "Paper_Censor": Passed/Failed, "Interview": Passed/Failed, "Final_Admission": 正取/備取/不取}
     collection.insert_one(data)
-    return JSONResponse(content={"message": "Data saved successfully"})
+    return JSONResponse(content={"message": "Data created successfully", 'status': 'success'})

@@ -103,7 +103,38 @@ if st.query_params['grad_tracker'] == 'true':
                 competition_name = st.text_input('競賽名稱')
                 award = st.selectbox('獎項', ['冠軍', '亞軍', '季軍', '佳作', '未獲獎'])
                 competition_level = st.selectbox('競賽等級', ['國際', '全國', '校內', '其他'])
+
+                submitted_competition_form = st.form_submit_button('Submit')
+
+                if submitted_competition_form:
+                    competition_detail.append({
+                        'competition_name': competition_name,
+                        'award': award,
+                        'competition_level': competition_level
+                    })
                 
+        # Grad applications
+        total_applications = st.number_input('總申請間數', min_value=0, value=0, step=1)
+        applications = []
+        if len(applications) < total_applications:
+            with st.form(key='ApplicationForm'):
+                st.write('輸入你的申請資訊')
+                university = st.text_input('申請學校')
+                department = st.text_input('申請系所')
+                paper_censor = st.selectbox('書面審查', ['通過', '未通過', '逕行錄取'])
+                interview = st.selectbox('面試', ['通過', '未通過'])
+                final_admission = st.selectbox('最終錄取', ['正取', '備取', '不取'])
+
+                submitted_application_form = st.form_submit_button('Submit')
+
+                if submitted_application_form:
+                    applications.append({
+                        'university': university,
+                        'department': department,
+                        'paper_censor': paper_censor,
+                        'interview': interview,
+                        'final_admission': final_admission
+                    })
 
         submitted_form = st.form_submit_button('Submit')
         student_name = st.query_params['student_name']
@@ -116,12 +147,20 @@ if st.query_params['grad_tracker'] == 'true':
                 'gpa_score': gpa_score,
                 'good_grade_awards': good_grade_awards,
                 'CPE_score': CPE_score,
+                'ICPC_experience': ICPC_experience,
+                'ICPC_detail': ICPC_detail,
+                'NCPC_experience': NCPC_experience,
+                'NCPC_detail': NCPC_detail,
                 'TA_experience': TA_experience,
                 'github_total_stars': github_total_stars,
                 'conference_papers': conference_papers,
                 'conference_papers_detail': conference_papers_detail,
                 'journal_papers': journal_papers,
-                'journal_papers_detail': journal_papers_detail
+                'journal_papers_detail': journal_papers_detail,
+                'internship_experience': internship_experience,
+                'competition_experience': competition_experience,
+                'competition_detail': competition_detail,
+                'applications': applications
             }
             response = requests.post(f"{BACKEND_URL}/grad_tracker", json=data)
             if response.status_code == 200 and response.json()['status'] == 'success':
