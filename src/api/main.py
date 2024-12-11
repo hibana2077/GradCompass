@@ -68,18 +68,18 @@ def create_data(data: dict):
     #             'good_grade_awards': good_grade_awards,
     #             'CPE_score': CPE_score,
     #             'ICPC_experience': ICPC_experience,
-    #             'ICPC_detail': ICPC_detail,
+    #             'ICPC_detail': ICPC_detail, # list of dict
     #             'NCPC_experience': NCPC_experience,
-    #             'NCPC_detail': NCPC_detail,
+    #             'NCPC_detail': NCPC_detail, # list of dict
     #             'TA_experience': TA_experience,
     #             'github_total_stars': github_total_stars,
     #             'conference_papers': conference_papers,
-    #             'conference_papers_detail': conference_papers_detail,
+    #             'conference_papers_detail': conference_papers_detail, # list of dict
     #             'journal_papers': journal_papers,
-    #             'journal_papers_detail': journal_papers_detail,
+    #             'journal_papers_detail': journal_papers_detail, # list of dict
     #             'internship_experience': internship_experience,
     #             'competition_experience': competition_experience,
-    #             'competition_detail': competition_detail,
+    #             'competition_detail': competition_detail, # list of dict
     #             'applications': applications
     #         }
     collection.insert_one(data)
