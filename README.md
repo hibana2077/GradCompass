@@ -9,7 +9,6 @@ GradCompass 是一個專門為各大學系所設計的自架式平台，旨在�
 ## 核心功能
 
 - 📊 **互動式路徑視覺化**：透過平行分類圖表追蹤歷屆錄取路徑
-- 👥 **申請經驗庫**：可搜尋的詳細推甄經驗資料庫
 - 📈 **統計分析**：歷年錄取數據與趨勢分析
 - 🔍 **智慧搜尋**：根據學校、系所或關鍵字尋找相關經驗
 - 🏷️ **標籤系統**：依研究領域和興趣分類並篩選經驗
@@ -42,23 +41,16 @@ GradCompass 是一個專門為各大學系所設計的自架式平台，旨在�
 git clone https://github.com/your-username/gradcompass.git
 ```
 
-2. Install dependencies
+2. Go to the project directory
 
 ```bash
-cd gradcompass
-npm install
+cd gradcompass/src
 ```
 
-3. Set up environment variables
+3. Run Docker Compose
 
 ```bash
-cp .env.example .env
-```
-
-4. Run development server
-
-```bash
-npm run dev
+docker-compose up
 ```
 
 ## Contributing
