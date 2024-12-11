@@ -53,6 +53,8 @@ cd gradcompass/src
 docker-compose up
 ```
 
+4. Open your browser and go to `http://localhost:8080`
+
 ## Contributing
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
