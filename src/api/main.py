@@ -50,6 +50,11 @@ def read_root():
 def read_health():
     return {"status": "ok"}
 
+@app.get("/test/data")
+def read_test_data():
+    df = pd.read_csv("./example.csv")
+    return df.to_dict(orient="records")
+
 @app.get("/data")
 def read_data():
     db = mongo_client["data_analysis_platform"]
