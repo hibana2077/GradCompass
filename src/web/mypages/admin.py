@@ -26,4 +26,9 @@ if not st.session_state.login:
                 st.write('Invalid username or password')
 else:
     st.title('Admin page')
-    st.write('This page is under construction.')
+
+    # generate a form link
+    with st.form(key='link_form'):
+        st.write('產生問卷連結')
+        student_id = st.text_input('學生學號')
+        student_name = st.text_input('學生姓名')
