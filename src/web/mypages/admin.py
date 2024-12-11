@@ -38,7 +38,7 @@ else:
         submitted = st.form_submit_button('Submit')
 
         if submitted:
-            st.write(f'問卷連結: https://{HOST}/form?student_id={student_id}&student_name={student_name}')
+            st.write(f'問卷連結: https://{HOST}/form?student_id={student_id}&student_name={student_name}&grad_tracker=true')
 
     # download the data
     with st.form(key='download_form'):
