@@ -4,11 +4,11 @@ import plotly.express as px
 import requests
 import os
 
-API_HOST = os.getenv("API_HOST", "localhost")
+BACKEND_URL = os.getenv("BACKEND_URL", "localhost")
 
 def get_data():
-    # response = requests.get(f"http://{API_HOST}:10000/data")
-    response = requests.get("http://{API_HOST}:10000/test/data")
+    # response = requests.get(f"http://{BACKEND_URL}:10000/data")
+    response = requests.get("{BACKEND_URL}:10000/test/data")
     return response.json()
 
 st.set_page_config(layout="wide")
