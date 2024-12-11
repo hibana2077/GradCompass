@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import os
 
+HOST = os.getenv("HOST", "localhost")
 st.set_page_config(layout="centered")
 
 ADMIN = os.getenv("ADMIN", "admin")
@@ -32,3 +33,8 @@ else:
         st.write('產生問卷連結')
         student_id = st.text_input('學生學號')
         student_name = st.text_input('學生姓名')
+
+        submitted = st.form_submit_button('Submit')
+
+        if submitted:
+            st.write(f'問卷連結: https://{HOST}/form?student_id={student_id}&student_name={student_name}')
