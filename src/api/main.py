@@ -61,6 +61,26 @@ def create_data(data: dict):
     db = mongo_client["data_analysis_platform"]
     collection = db["grad_data"]
     # data format:
-    # {"Student ID": x, "CPE": x, "Competition": x, "Journal": x, "Conference": x, "Internship": x, "GPA": x, "Application_Universities": x, "Application_Departments": x, "Paper_Censor": Passed/Failed, "Interview": Passed/Failed, "Final_Admission": 正取/備取/不取}
+    # {
+    #             'student_name': student_name,
+    #             'student_id': student_id,
+    #             'gpa_score': gpa_score,
+    #             'good_grade_awards': good_grade_awards,
+    #             'CPE_score': CPE_score,
+    #             'ICPC_experience': ICPC_experience,
+    #             'ICPC_detail': ICPC_detail,
+    #             'NCPC_experience': NCPC_experience,
+    #             'NCPC_detail': NCPC_detail,
+    #             'TA_experience': TA_experience,
+    #             'github_total_stars': github_total_stars,
+    #             'conference_papers': conference_papers,
+    #             'conference_papers_detail': conference_papers_detail,
+    #             'journal_papers': journal_papers,
+    #             'journal_papers_detail': journal_papers_detail,
+    #             'internship_experience': internship_experience,
+    #             'competition_experience': competition_experience,
+    #             'competition_detail': competition_detail,
+    #             'applications': applications
+    #         }
     collection.insert_one(data)
     return JSONResponse(content={"message": "Data created successfully", 'status': 'success'})
