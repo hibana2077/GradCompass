@@ -26,12 +26,11 @@ GradCompass 是一個專門為各大學系所設計的自架式平台，旨在�
 - **Backend**: FastAPI
 - **Database**: MongoDB
 
-## 系統需求
+## 特色功能
 
 - 支援系所獨立部署
 - 彈性的資料收集與管理
 - 安全的資料存取控制
-- 支援多重資料庫整合
 
 ## Getting Started
 
