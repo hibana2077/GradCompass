@@ -10,6 +10,8 @@ services:
       UNIVERSITY_EMAIL: "csie@nttu.edu.tw"
       UNIVERSITY_WEBSITE: "https://www.nttu.edu.tw/"
       BACKEND_URL: "http://api:10000"
+      ADMIN: "admin"
+      ADMIN_PASSWORD: "admin"
     ports:
       - "8080:8080"
     depends_on:
