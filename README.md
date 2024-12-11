@@ -23,10 +23,9 @@ GradCompass 是一個專門為各大學系所設計的自架式平台，旨在�
 
 ## 技術架構
 
-- **Frontend**: React.js + Tailwind CSS
+- **Frontend**: Streamlit
 - **Backend**: FastAPI
-- **Database**: MongoDB + PostgreSQL
-- **Visualization**: D3.js
+- **Database**: MongoDB
 
 ## 系統需求
 
