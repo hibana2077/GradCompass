@@ -34,11 +34,14 @@ else:
         st.write('產生問卷連結')
         student_id = st.text_input('學生學號')
         student_name = st.text_input('學生姓名')
-
+        enable_https = st.checkbox('Enable HTTPS')
         submitted = st.form_submit_button('Submit')
 
         if submitted:
-            st.write(f'問卷連結: https://{HOST}/form?student_id={student_id}&student_name={student_name}&grad_tracker=true')
+            if enable_https:
+                st.write(f'問卷連結: https://{HOST}/form?student_id={student_id}&student_name={student_name}&grad_tracker=true')
+            else:
+                st.write(f'問卷連結: http://{HOST}/form?student_id={student_id}&student_name={student_name}&grad_tracker=true')
 
     # download the data
     with st.form(key='download_form'):
