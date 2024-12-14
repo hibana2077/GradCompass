@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/header.png" alt="GradCompass" width="100%">
+</p>
+
 # GradCompass
 
 🎓 專為台灣的大學推甄管道量身打造的系所申請導航平台。透過學長姐的申請經驗、互動式視覺化介面，協助學生規劃研究所推甄之路。
