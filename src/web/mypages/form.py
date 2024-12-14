@@ -43,7 +43,7 @@ if "grad_tracker" in st.query_params or "grad_tracker" in st.session_state:
             host_organization = st.selectbox(f'主辦單位 {i+1}', ['IEEE', 'ACM', 'IET', 'Springer', 'Elsevier', 'AAAI', '其他'])
             paper_field = st.selectbox(f'論文領域 {i+1}', ['CV', 'NLP', 'ML', 'AI', 'DS', 'HCI', 'SE', 'Networking', 'Security', 'Blockchain', '其他'])
             presentation_type = st.selectbox(f'發表形式 {i+1}', ['Oral', 'Poster', 'Oral & Poster'])
-            collaboration = st.selectbox(f'是否合作 {i+1}', ['是', '否'])
+            collaboration = st.selectbox(f'是否合作 {i+1}', ['是', '否'], key=f'conference_collaboration_{i}')
             conference_papers_detail.append({
                 'author_rank': author_rank,
                 'host_organization': host_organization,
@@ -59,7 +59,7 @@ if "grad_tracker" in st.query_params or "grad_tracker" in st.session_state:
             author_rank = st.number_input(f'作者排名 {i+1}', min_value=1, value=1, step=1, key=f'journal_author_rank_{i}')
             journal_index = st.selectbox(f'期刊索引 {i+1}', ['SCI', 'SSCI', 'EI', 'SCIE', '其他'])
             impact_factor = st.number_input(f'影響因子 {i+1}', min_value=0.0, value=0.0, step=0.1)
-            collaboration = st.selectbox(f'是否合作 {i+1}', ['是', '否'])
+            collaboration = st.selectbox(f'是否合作 {i+1}', ['是', '否'], key=f'journal_collaboration_{i}')
             journal_papers_detail.append({
                 'author_rank': author_rank,
                 'journal_index': journal_index,
@@ -88,7 +88,7 @@ if "grad_tracker" in st.query_params or "grad_tracker" in st.session_state:
             department = st.text_input(f'申請系所 {i+1}')
             paper_censor = st.selectbox(f'書面審查 {i+1}', ['通過', '未通過', '逕行錄取'])
             interview = st.selectbox(f'面試 {i+1}', ['通過', '未通過'])
-            final_admission = st.selectbox(f'最終錄取 {i+1}', ['正取', '備取', '不取'])
+            final_admission = st.selectbox(f'最終錄取 {i+1}', ['正取', '備取', '未錄取'])
             applications.append({
                 'university': university,
                 'department': department,
@@ -131,7 +131,6 @@ if "grad_tracker" in st.query_params or "grad_tracker" in st.session_state:
             st.success('成功提交學術背景資料')
             st.session_state.pop('form_data')
             st.session_state.pop('grad_tracker')
-            st.rerun()
         else:
             st.error('提交學術背景資料失敗，請聯繫管理員')
 else:

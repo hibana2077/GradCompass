@@ -59,7 +59,8 @@ def read_test_data():
 def read_data():
     db = mongo_client["data_analysis_platform"]
     collection = db["grad_data"]
-    data = list(collection.find())
+    # 查詢並移除 _id
+    data = list(collection.find({}, {"_id": 0}))
     return data
 
 @app.post("/grad_tracker")
