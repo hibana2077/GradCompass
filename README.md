@@ -1,4 +1,4 @@
-<kbd>![header](./assets/header.png)</kbd>
+<img src="./assets/header.png" alt="Image description" style="border-radius: 15px;">
 
 # GradCompass
 
