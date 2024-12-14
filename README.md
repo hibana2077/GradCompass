@@ -1,5 +1,5 @@
 <kdb>
-    <img src="./assets/header.png" alt="GradCompass" width="100%" style="border-radius:50%">
+    <img src="./assets/header.png">
 </kdb>
 
 # GradCompass
