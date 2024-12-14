@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="./assets/header.png" alt="GradCompass" width="100%" style="border-radius:50%">
+    <kdb>
+        <img src="./assets/header.png" alt="GradCompass" width="100%" style="border-radius:50%">
+    </kdb>
 </p>
 
 # GradCompass
