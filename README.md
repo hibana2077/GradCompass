@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header.png" alt="GradCompass" width="100%" style="radius: 10px">
+  <img src="./assets/header.png" alt="GradCompass" width="100%" style="border-radius:50%">
 </p>
 
 # GradCompass
