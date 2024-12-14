@@ -1,6 +1,4 @@
-<kdb>
-    <img src="./assets/header.png">
-</kdb>
+<kbd>![header](./assets/header.png)</kbd>
 
 # GradCompass
 
